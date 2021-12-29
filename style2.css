@@ -1,0 +1,56 @@
+*{
+    color: #cccccc;
+}
+
+body
+{
+    animation: fadeInAnimation ease 1s; 
+    animation-fill-mode: forwards; 
+    animation-iteration-count: 1; 
+    background: #262626;
+    } 
+    @keyframes fadeInAnimation { 
+    0% { 
+    opacity: 0; 
+    } 
+    100% { 
+    opacity: 1; 
+    }
+
+    color: #f2f2f2;
+}
+
+*{
+    text-align: center;
+}
+
+p{
+    font-size: 0.8em;
+}
+
+
+.table-all{
+    border-collapse: collapse;
+    width: 20%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.table-all{
+    border: 1px solid #cccccc
+    
+}
+
+.table-all tr{
+    border-bottom: 1px solid #cccccc
+}
+
+.table-all td,
+
+th{
+    padding:8px;
+}
+
+.hover:hover{
+    background-color:#1a1a1a
+}
