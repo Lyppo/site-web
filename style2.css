@@ -54,3 +54,14 @@ th{
 .hover:hover{
     background-color:#1a1a1a
 }
+
+.img{
+    float: none;
+    max-width: 15%;
+    height: auto;
+}
+
+.dessous
+{
+    clear: both;
+}
