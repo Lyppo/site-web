@@ -253,3 +253,16 @@ iframe{
 .btn:hover, .dropdown:hover .btn {
   background-color: #1a1a1a;
 }
+
+.vidéo{
+    border-radius: 16px;
+}
+
+.centrer{
+    text-align: center;
+}
+
+.petit{
+    font-size: 0.7em;
+    text-align: center;
+}
