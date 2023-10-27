@@ -1,0 +1,322 @@
+/* police */
+
+@font-face{
+    font-family: "police";
+    src: url("../police/Next-Sunday.ttf") format("truetype");
+}
+
+* {
+    font-family: "police";
+}
+
+
+
+
+/* modif général */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    color: #f3f3f3;
+    background-color: #262526;
+    box-shadow: inset #0f0f0f 3px 3px 3px, inset #0f0f0f -3px -3px 3px;
+}
+
+h1 {
+    pointer-events: none;
+}
+
+h2 {
+    margin: 0;
+}
+
+h4 {
+    margin: 0;
+}
+
+a {
+    color: #f3f3f3;
+    text-decoration: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+small {
+    font-size: 0.7em;
+}
+
+.one-line, .five-line {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+.one-line {
+    -webkit-line-clamp: 1;
+}
+
+.five-line {
+    -webkit-line-clamp: 5;
+}
+
+
+
+
+/* bannière */
+
+.banniere {
+    height: 18.75vw;
+    position: relative;
+    background-image: url("../img/banniere.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    box-shadow: inset #0f0f0f 0 -5px 5px;
+}
+
+.banniere h1, .banniere small {
+    padding: 0.3em;
+    position: absolute;
+    color: #f3f3f3;
+    background-color: #262526;
+}
+
+.banniere h1 {
+    margin: 1em;
+    border-radius: 10px;
+    box-shadow: inset #0f0f0f 3px 3px 3px, inset #0f0f0f -3px -3px 3px, inset #0f0f0f -3px 3px 3px, inset #0f0f0f 3px -3px 3px;
+}
+
+.banniere small {
+    right: 0;
+    bottom: 0;
+    border-radius: 0 10px;
+    box-shadow: inset #0f0f0f 0 -3px 5px;
+}
+
+/* menu */
+
+.menu{
+    position: sticky;
+    top: 0;
+    background-color: #0f0f0f;
+    box-shadow: #0f0f0f 0 5px 5px;
+}
+
+.menu ul {
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.menu li {
+    text-align: center;
+}
+
+.menu li:hover {
+    color: #d7d8da;
+    background-color: #262526;
+    text-shadow: #d7d8da 0 0 10px;
+    box-shadow: inset #0f0f0f 10px 10px 10px, inset #0f0f0f -10px -10px 10px, inset #0f0f0f -10px 10px 10px, inset #0f0f0f 10px -10px 10px;
+}
+
+.menu a {
+    padding: 1.5em 0;
+    width: 100%;
+    display:inline-block;
+    color: #f3f3f3;
+}
+
+/* intro */
+
+article {
+    margin: 2em auto;
+    padding: 1rem;
+    width: 85%;
+    background: #7f8084;
+    text-shadow: #0f0f0f 0 0 1px;
+    box-shadow: inset #262526 3px 3px 3px, inset #262526 -3px -3px 3px, inset #262526 -3px 3px 3px, inset #262526 -3px 3px 3px, #0f0f0f 3px 3px 3px, #0f0f0f -3px -3px 3px, #0f0f0f -3px 3px 3px, #0f0f0f 3px -3px 3px;
+}
+
+article a {
+    padding: 0.5rem;
+    background: #262526;
+    border-radius: 5px;
+    box-shadow: inset #7f8084 2px 2px 1px, inset #7f8084 -2px -2px 1px, inset #7f8084 -2px 2px 1px, inset #7f8084 -2px 2px 1px;
+}
+
+article a:hover {
+    padding: 0.5rem;
+    border-radius: 5px;
+    color: #262526;
+    background: #d7d8da;
+    text-shadow: #f3f3f3 0 0 10px;
+    box-shadow: inset #7f8084 2px 2px 1px, inset #7f8084 -2px -2px 1px, inset #7f8084 -2px 2px 1px, inset #7f8084 -2px 2px 1px;
+}
+
+.icon {
+    margin: 1em auto;
+    width: 60%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: inset #262526 2px 2px 1px, inset #262526 -2px -2px 1px, inset #262526 -2px 2px 1px, inset #262526 -2px 2px 1px, #262526 2px 2px 2px, #262526 -2px -2px 2px, #262526 -2px 2px 2px, #262526 2px -2px 2px;
+}
+
+.horreur {
+    background-image: url("../img/horreur.svg");
+}
+
+.aventure {
+    background-image: url("../img/aventure.svg");
+}
+
+.histoire {
+    background-image: url("../img/histoire.svg");
+}
+
+.horreur, .aventure, .histoire {
+    margin: 0 auto;
+    padding: 1.5em;
+    padding-left: 3.5em;
+    max-width: 5em;
+    background-size: 3em;
+    background-repeat: no-repeat;
+    background-position: 0 0.5em;
+}
+
+/* centre */
+
+.interact {
+    margin: 1em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 1em;
+}
+
+.interact a, .interact figure {
+    margin: 0;
+}
+
+.interact img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+    box-shadow: #0f0f0f 5px 5px 5px, #0f0f0f -5px -5px 5px, #0f0f0f -5px 5px 5px, #0f0f0f 5px -5px 5px;
+}
+
+.little-nightmares, .minecraft, .plague-tale {
+    position: relative;
+    bottom: 0;
+}
+
+.on-image {
+    margin-left: 0.5rem;
+    position: absolute;
+    top: calc(100% - 9rem);
+}
+
+.on-image small, .on-image span {
+    margin: 0;
+    padding: 0.1rem 0.5rem;
+    border-radius: 5px;
+    color: #f3f3f3;
+    background-color: #262526;
+    box-shadow: inset #0f0f0f 2px 2px 1px, inset #0f0f0f -2px -2px 1px, inset #0f0f0f -2px 2px 1px, inset #0f0f0f -2px 2px 1px;
+}
+
+figcaption {
+    opacity: 0;
+}
+
+figure:hover {
+    padding: calc(10% / 4) calc(10% / 2);
+    width: 90%;
+}
+
+figure:active {
+    padding: calc(15% / 4) calc(15% / 2);
+    width: 85%;
+}
+
+figure:hover h3 {
+    font-size: calc(1.17em * 0.9);
+	transition: 0.2s;
+}
+
+figure:active h3 {
+    font-size: calc(1.17em * 0.85);
+	transition: 0.2s;
+}
+
+figure:hover small {
+    font-size: calc(0.7em * 0.9);
+	transition: 0.2s;
+}
+
+figure:active small {
+    font-size: calc(0.7em * 0.85);
+	transition: 0.2s;
+}
+
+figure:hover p {
+    font-size: calc(1em * 0.9);
+}
+
+figure:active p {
+    font-size: calc(1em * 0.85);
+}
+
+figure:hover .on-image {
+    top: calc(90% - 7.3rem);
+}
+
+figure:active .on-image {
+    top: calc(85% - 6.7rem);
+}
+
+figure:hover figcaption {
+    opacity: 100;
+    transition-delay: 0.3s;
+    transition-duration: 0.8s;
+    pointer-events: stroke;
+}
+
+figcaption p {
+    margin: 0 auto;
+    padding: 1em;
+    width: 75%;
+    border-top: 0;
+    pointer-events: none;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background: #7f8084;
+    box-shadow: #0f0f0f 5px 5px 5px, #0f0f0f -5px 5px 5px, inset #262526 0 5px 5px;
+}
+
+/* pied */
+
+footer {
+    margin: auto;
+    padding: 1rem 0;
+    width: 100%;
+    text-align: center;
+    color: #f3f3f3;
+    background-color: #7f8084;
+    box-shadow: inset #262526 3px 3px 3px, inset #262526 -3px -3px 3px;
+}
+
+footer a:hover {
+    text-decoration:#262526 wavy underline;
+}
+
+footer a:active {
+    color: #262526;
+}
