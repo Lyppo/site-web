@@ -1,0 +1,464 @@
+/* police */
+
+@font-face{
+    font-family: "police";
+    src: url("../police/PatuaOne-Regular.ttf") format("truetype");
+}
+
+/* variable */
+
+:root {
+    --casi-noir: #0f0f0f;
+
+    --gris-dark: #181818;
+
+    --gris-sombre: #262526;
+
+    --gris-basic: #6d6e72;
+
+    --blanc-sombre: #e1e2e4;
+
+    --casi-blanc: #f3f3f3;
+}
+
+/* modif général */
+
+* {
+    font-family: "police";
+    scroll-behavior: smooth;
+    color: var(--casi-blanc);
+    text-shadow: 0 0 1px var(--casi-noir);
+}
+
+body {
+    margin: 0;
+    background-color: var(--gris-sombre);
+}
+
+h1 {
+    margin: .5em;
+    padding: .5em;
+    min-width: 0%;
+    max-width: 80%;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    pointer-events: none;
+    background-color: var(--gris-dark);
+    box-shadow: 5px 5px 10px var(--casi-noir), inset 0 0 0 3px var(--casi-noir);
+    transition: 1s ease-in-out;
+}
+
+article {
+    margin: 1em auto;
+    padding: 1em;
+    max-width: 80%;
+    background-color: var(--gris-basic);
+    box-shadow: 5px 5px 10px var(--casi-noir), inset 0 0 0 3px var(--casi-noir);
+}
+
+h2, h3, h4 {
+    text-decoration: underline;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    transition: .2s ease-in-out;
+}
+
+h2::after, h3::after, h4::after {
+    content: ' :';
+}
+
+h2:first-of-type, h4:first-of-type {
+    margin-top: 0;
+}
+
+h3 {
+    margin: 1em;
+}
+
+figure {
+    margin: 0;
+    display: grid;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+li {
+    transition: .2s ease-in-out;
+}
+
+a { 
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+p {
+    margin: 0 1em;
+}
+
+/* bannières */
+
+header {
+    height: 25vh;
+    max-height: calc(100vw/(16/9));
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.banniere-accueil {
+    background-image: url("../img/banniere-accueil.png");
+    background-position-y: 47%;
+}
+
+.banniere-little-nightmares {
+    background-image: url("../img/little-nightmares.jpg");
+    background-position-y: 50%;
+}
+
+.banniere-minecraft {
+    background-image: url("../img/minecraft.jpg");
+    background-position-y: 20%;
+}
+
+.banniere-plague-tale {
+    background-image: url("../img/plague-tale.jpg");
+    background-position-y: 45%;
+}
+
+.banniere-bo-jeux {
+    background-image: url("../img/divers-jeux-video.jpg");
+    background-position-y: 40%;
+    max-height: calc(100vw/(192/95));
+}
+
+/* menu */
+
+nav {
+    position: sticky;
+    z-index: 1;
+    top: 0;
+}
+
+nav > ul {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+nav li {
+    background-color: var(--gris-sombre);
+    box-shadow: inset 0 0 0 3em var(--casi-noir);
+}
+
+nav li:hover {
+    box-shadow: inset 0 0 0 15px var(--casi-noir);
+}
+
+nav a {
+    padding: 1.5em;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.menu-deroulant {
+    padding: 1.5em 0;
+    transition: .2s ease-in-out .4s;
+}
+
+.menu-deroulant:hover {
+    transition: .2s ease-in-out;
+}
+
+.menu-deroulant ul {
+    margin: 0 1%;
+    position: absolute;
+    padding-top: 1.5em;
+    width: 23%;
+    max-height: 0;
+    overflow: hidden;
+    transition: .2s ease-in-out .2s;
+}
+
+.menu-deroulant:hover ul {
+    max-height: calc(300% + 6em);
+    transition: .3s ease-in-out .2s;
+}
+
+.menu-deroulant a {
+    margin: 0 calc(50% - 1.5em);
+    padding: 2em .5em;
+    max-width: 0;
+    border-top: 2px solid var(--gris-sombre);
+}
+
+.menu-deroulant:hover a {
+    margin: 0 1em;
+    padding: 1.5em .5em;
+    max-width: 100%;
+}
+
+.menu-deroulant-1 {
+    transition: .3s ease-in-out .2s;
+}
+
+.menu-deroulant:hover .menu-deroulant-1 {
+    transition: .5s ease-in-out .1s;
+}
+
+.menu-deroulant-2 {
+    transition: .3s ease-in-out .1s;
+}
+
+.menu-deroulant:hover .menu-deroulant-2 {
+    transition: .5s ease-in-out .2s;
+}
+
+.menu-deroulant-3 {
+    transition: .3s ease-in-out;
+}
+
+.menu-deroulant:hover .menu-deroulant-3 {
+    transition: .5s ease-in-out .3s;
+}
+
+/* page des articles */
+
+.inter, .in-article {
+    width: 50%;
+    padding: 0;
+    position: relative;
+    transition: 1s ease-in-out;
+    border: 3px solid var(--casi-noir);
+    box-shadow: 5px 5px 10px var(--casi-noir);
+}
+
+.inter div, .in-article {
+    display: block;
+    overflow: hidden;
+}
+
+.in-article {
+    margin: auto;
+    margin-top: 1.5em;
+}
+
+.inter video, .inter img, .inter audio, .in-article img, .in-article audio {
+    display: block;
+    width: 100%;
+}
+
+.inter img {
+    transition: 5s ease-in-out;
+}
+
+.inter img:hover {
+    transform: scale(2) rotate(-30deg);
+    transition: 60s ease-in-out;
+}
+
+.in-article img {
+    transition: .2s ease-in-out;
+}
+
+.in-article:hover img {
+    transform: scale(1.02);
+}
+
+.inter audio, .in-article audio {
+    position: absolute;
+    bottom: 0;
+}
+
+/* section comprenant les 3 articles */
+
+.article-jeu-accueil {
+    margin: auto;
+    width: 95%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.article-jeu-accueil article {
+    margin: 2em;
+    padding: 0;
+    max-width: 100%;
+    background-color: var(--gris-dark);
+    border: 3px solid var(--casi-noir);
+    box-shadow: 5px 5px 10px var(--casi-noir);
+    transition: 1s ease-in-out;
+}
+
+.article-jeu-accueil div {
+    order: -1;
+    overflow: hidden;
+}
+
+.article-jeu-accueil img {
+    display: block;
+    transition: .2s ease-in-out;
+}
+
+.article-jeu-accueil article:hover img {
+    transform: scale(1.05);
+}
+
+.article-jeu-accueil article:active img {
+    transition: .01s;
+    transform: scale(1.02);
+}
+
+.article-jeu-accueil p {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 1em;
+    transition: .2s ease-in-out;
+}
+
+.article-jeu-accueil article:hover h3, .article-jeu-accueil article:hover p {
+    transform: scale(1.01);
+}
+
+.article-jeu-accueil article:active h3, .article-jeu-accueil article:active p {
+    transition: .01s;
+    transform: scale(1.005);
+}
+
+/* footer */
+
+footer {
+    margin-top: 1em;
+    padding: 1em;
+    background-color: var(--gris-basic);
+    box-shadow: inset 0 3px var(--casi-noir);
+}
+
+footer h4 {
+    text-align: center;
+    position: relative;
+    transition: .5s ease-in-out 1s;
+    top: 1.5em;
+}
+
+footer:hover h4 {
+    transition: .5s ease-in-out;
+    top: 0;
+}
+
+.credit-4 {
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+.credit-3 {
+    grid-template-columns: calc(100% / 3) calc(100% / 3) calc(100% / 3);
+}
+
+.credit-6 {
+    grid-template-columns: calc(100% / 6) calc(100% / 6) calc(100% / 6) calc(100% / 6) calc(100% / 6) calc(100% / 6);
+}
+
+.credit-13 {
+    grid-template-columns: calc(100% / 13) calc(100% / 13) calc(100% / 13) calc(100% / 13) calc(100% / 13) calc(100% / 13) calc(100% / 13) calc(100% / 13) calc(100% / 13) calc(100% / 13) calc(100% / 13) calc(100% / 13) calc(100% / 13);
+}
+
+footer ul {
+    margin: auto;
+    width: 64%;
+    max-width: 0;
+    display: grid;
+    opacity: 0;
+    transition: 1s ease-in-out;
+}
+
+footer:hover ul {
+    max-width: 100%;
+    opacity: 1;
+    transition: 1s .5s ease-in-out;
+}
+
+footer li {
+    border-left: 1px solid var(--casi-blanc);
+}
+
+footer li:first-child {
+    border-color: #00000000;
+}
+
+footer a {
+    padding: .5em;
+    display: block;
+    font-size: .7em;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+footer a:hover {
+    text-decoration:#262526 wavy underline;
+}
+
+footer a:active {
+    color:#262526;
+}
+
+/* screen */
+
+@media (orientation: portrait) {
+    h1 {
+        margin: 1em calc(10% - .5em);
+        min-width: 80%;
+        text-align: center;
+    }
+}
+
+@media (orientation: landscape) and (max-width: 1200px) {
+    .article-jeu-accueil article {
+        margin: .5em;
+    }
+}
+
+@media (max-width: 800px) {
+    h1 {
+        font-size: 1em;
+    }
+    nav {
+        font-size: .7em;
+    }
+    .inter {
+        width: 100%;
+    }
+    .article-jeu-accueil article {
+        margin: 1em;
+    }
+    .credit-4, .credit-3, .credit-6, .credit-13 {
+        grid-template-columns: 1fr;
+    }
+    footer li {
+        border: 0;
+        border-top: 1px solid var(--casi-blanc);
+    }
+    footer a {
+        padding: 1em;
+    }
+}
+
+@media (orientation: portrait) or (max-width: 800px) {
+    .article-jeu-accueil {
+        width: 75%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    .in-article {
+        width: 95%;
+    }
+}
